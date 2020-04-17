@@ -1,0 +1,54 @@
+$primary-dark-color: #388E3C;
+$primary-color: #4CAF50;
+$primary-light-color: #C8E6C9;
+$text-color: #FFF;
+$icon-color: #FFF;
+$accent-color: #FF9800;
+$primary-text-color: #212121;
+$secondary-text-color: #757575;
+$divider-color: #BDBDBD;
+
+body {
+    display: grid;
+    min-height: 100vh;
+
+    color: $primary-text-color;
+    font-size: 18px;
+}
+
+strong {
+    font-weight: 700;
+}
+
+input:hover {
+    cursor: text;
+    background-color: $primary-light-color;
+}
+
+.btn {
+    height: 2rem;
+    padding: 0 8px;
+    cursor: pointer;
+    outline: none;
+
+    font-size: 1.5em;
+
+    &.btn-primary {
+        color: $text-color;
+        background-color: $accent-color;
+    }
+
+    &:active {
+        transform: scale(1.05);;
+    }
+
+    &.btn-flat {
+        color: $icon-color;
+        border: none;
+        background-color: transparent;
+
+        &:active {
+            color: $accent-color;
+        }
+    }
+}

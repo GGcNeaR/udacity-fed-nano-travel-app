@@ -1,0 +1,53 @@
+@import 'resets.scss';
+@import 'base.scss';
+@import 'navbar.scss';
+@import 'footer.scss';
+
+@import 'card.scss';
+
+body {
+    grid-template-rows: auto 1fr auto;
+}
+
+main {
+    padding: 2.2rem;
+
+    h2 {
+        color: $secondary-text-color;
+        font-size: 1.7em;
+        margin: 32px 4px 8px 4px;
+    }
+
+    .divider {
+        margin: 1.5em;
+    }
+
+    .search-result,
+    .search-history {
+        min-height: 180px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .search-result {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .search-history {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (min-width: 1280px) {
+    .navbar,
+    main,
+    footer {
+        padding: 0 20%;
+    }
+}

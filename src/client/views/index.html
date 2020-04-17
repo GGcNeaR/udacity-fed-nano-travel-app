@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel App</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li>
+                <a href="/" class="brand-name">Travel Planning</a>
+            </li>
+            <li class="sub-title">When COVID-19 stops you from travelling but can not stop you from planning :)</li>
+        </ul>
+
+        <div class="search-control-group">
+            <input type="text" name="search-location" id="search-location" class="input-search" placeholder="Enter destination" maxlength="100" tabindex="1">
+            <input type="date" name="search-date" id="search-date" class="input-search" tabindex="2">
+            <button id="btn-search" class="btn btn-fab btn-primary"><span class="material-icons">search</span></button>
+        </div>
+    </nav>
+
+    <main>
+        <div id="current-search-result" class="search-result"></div>
+
+        <hr class="divider">
+
+        <h2>Destination History</h2>
+
+        <div id="search-history" class="search-history"></div>
+    </main>
+
+    <footer class="footer">
+        <ul>
+            <li>Created by Borislav Borisov</li>
+            <li class="copyright">Copyright 2020</li>
+        </ul>
+    </footer>
+
+    
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+</body>
+</html>
